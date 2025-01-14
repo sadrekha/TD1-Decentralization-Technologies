@@ -36,7 +36,7 @@ Todo List
 5. Exit  
 
 Enter number: 1  
-Task description: Finish open-source project  
+Task description: Finish feature 
 Task added!  
 ```
 
