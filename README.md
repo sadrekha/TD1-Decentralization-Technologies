@@ -24,7 +24,8 @@ It's a Python program that runs in the terminal and provides users with a way to
 - **2. Delete a Task:** Removes a task based on its number.  
 - **3. Mark a Task as Completed:** Marks a task as completed.  
 - **4. View Tasks:** Displays all tasks.  
-- **5. Exit:** Exits.  
+- **5. Save Tasks:** Saves all tasks into a tasks.txt file.
+- **6. Exit:** Exits.  
 
 ## **Sample Usage**  
 ```plaintext
@@ -32,13 +33,18 @@ Todo List
 1. Add task  
 2. Delete task  
 3. Task completed  
-4. View tasks  
-5. Exit  
+4. View tasks 
+5. Save tasks 
+6. Exit
 
 Enter number: 1  
-Task description: Finish feature 
+Task description: Finish feature
+Due date: 10/02
 Task added!  
 ```
+
+Example screenshot:
+![example screenshot](screenshot.png)
 
 ## **How to Contribute**  
 ```bash
