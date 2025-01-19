@@ -6,7 +6,8 @@ def show_menu():
     print("2. Delete task")
     print("3. Task completed")
     print("4. View tasks")
-    print("5. Exit")
+    print("5. Save tasks")
+    print("6. Exit")
 
 def add_task():
     task = input("Task description: ")
@@ -42,6 +43,19 @@ def view_tasks():
             date = task["date"]
             print(f"{i + 1}. {task['task']} ({date}) - [{status}]")
 
+def save_tasks():
+    f = open("tasks.txt", "w")
+    if not tasks:
+        f.write("No tasks")
+    else:
+        f.write("Tasks:")
+        for i, task in enumerate(tasks):
+            status = "✓" if task["completed"] else "✗"
+            date = task["date"]
+            f.write(f"{i + 1}. {task['task']} ({date}) - [{status}]")
+    f.close()
+    print("Current tasks saved to tasks.txt")
+
 while True:
     show_menu()
     choice = input("Enter number: ")
@@ -54,6 +68,8 @@ while True:
     elif choice == "4":
         view_tasks()
     elif choice == "5":
+        save_tasks()
+    elif choice == "6":
         print("Exit")
         break
     else:
