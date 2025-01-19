@@ -10,7 +10,8 @@ def show_menu():
 
 def add_task():
     task = input("Task description: ")
-    tasks.append({"task": task, "completed": False})
+    date = input("Due date: ")
+    tasks.append({"task": task, "completed": False, "date": date})
     print("Task added")
 
 def delete_task():
@@ -38,7 +39,8 @@ def view_tasks():
         print("\n Tasks:")
         for i, task in enumerate(tasks):
             status = "✓" if task["completed"] else "✗"
-            print(f"{i + 1}. {task['task']} - [{status}]")
+            date = task["date"]
+            print(f"{i + 1}. {task['task']} ({date}) - [{status}]")
 
 while True:
     show_menu()
